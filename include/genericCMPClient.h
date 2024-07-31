@@ -15,6 +15,10 @@
 #ifndef GENERIC_CMP_CLIENT_H
 # define GENERIC_CMP_CLIENT_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 # include "genericCMPClient_config.h"
 
 # include <openssl/opensslv.h>
@@ -285,5 +289,9 @@ void TLS_free(OPTIONAL SSL_CTX *tls);
 # else
 #  include <secutils/util/extensions.h>
 # endif
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* GENERIC_CMP_CLIENT_H */
